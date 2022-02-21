@@ -1,0 +1,331 @@
+:root{
+  --bgcolor:black;
+  --navcolor:rgb(15, 15, 15);
+  --textnav:white;
+  --logo:url("imgs/logo1.png");
+  --navhover:rgb(16, 155, 11);
+  --navhover2:rgba(16, 155, 11, 0.3);
+
+}
+.dark:root{
+  --bgcolor:black;
+  --navcolor:rgb(15, 15, 15);
+  --textnav:white;
+  --logo:url("imgs/logo1.png");
+  --navhover:rgb(16, 155, 11);
+  --navhover2:rgba(16, 155, 11, 0.3);
+
+}
+.gray:root{
+  --bgcolor:rgb(46, 46, 46);
+  --navcolor:rgb(54, 54, 54);
+  --textnav:white;
+  --logo:url("imgs/logo2.png");
+  --navhover:rgb(206, 65, 0);
+  --navhover2:rgba(206, 65, 0, 0.5);
+
+}
+.red:root{
+  --bgcolor:rgb(46, 0, 0);
+  --navcolor:rgb(80, 0, 0);
+  --textnav:white;
+  --logo:url("imgs/logo3.png");
+  --navhover:rgb(167, 167, 167);
+  --navhover2:rgba(167, 167, 167, 0.3);
+
+}
+body{
+  margin: auto;
+  background-color: var(--bgcolor);
+  cursor: pointer
+
+}
+/*-----------------------------------------navbar-----------------------------------------------*/
+.menu {
+	background: var(--navcolor);
+	color: var(--textnav);
+	height: 56px;
+	padding-left: 800px;
+}
+.logo{
+	background-image: var(--logo);
+	width: 244px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	left: 0;
+}
+.menu ul, .menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+.options {
+    width: 100%;
+}
+.user{
+	left: 50px;
+	background-color: rgb(92, 92, 92);
+	border-radius: 15px;
+
+}
+.menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+.menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: var(--textnav);
+	font-size: 16px;
+}
+.menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+.menu li a:hover {
+	color: var(--navhover);
+	transition: 0.5s ease;
+
+}
+.menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+}
+.menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+.menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+.menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: var(--navcolor);
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+.menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+.menu ul.sub-menus a {
+	color: var(--textnav);
+	font-size: 16px;
+}
+.menu li:hover ul.sub-menus {
+	display: block
+}
+.menu ul.sub-menus a:hover{
+	background: var(--navcolor);
+	color: var(--navhover);
+}
+/*-----------------------------------------fim navbar-----------------------------------------------*/
+
+
+/*-----------------------------------------conteúdo-----------------------------------------------*/
+.principal{
+	background-image: radial-gradient(rgba(0, 0, 0, 0.62), rgba(80, 80, 80, 0.58)),url("imgs/esportes/0.jpg");
+	height: 65vh;
+	background-position-x: right;
+	background-size: cover;
+	padding: 15px;
+
+}
+.title{
+	font-size: 42px;
+	font-weight: bold;
+	color: white;
+}
+.principal p{
+	color: white;
+	text-align: justify;
+	background: radial-gradient(rgba(0, 0, 0, 0.62), rgba(80, 80, 80, 0.58))
+}
+.texts{
+	display: grid;
+	line-height: 23px;
+	width: 70%;
+}
+.buttons button{
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+	cursor: pointer;
+}
+.buttons button:hover{
+	background-color: rgba(56, 56, 56, 0.542);
+	transition: 0.5s ease-in-out;
+}
+.arrow::before{
+	content: "\25B6";
+	color: white;
+}
+/*-----------------------------------------fim conteúdo-----------------------------------------------*/
+
+/*----------------------------------------carousel-------------------------------------------*/
+.content{
+    position: relative;
+    margin-left: 47px;
+}
+.carousel{
+	width: 99%;
+	position: relative;
+}
+.carousel h2{
+	color: var(--textnav);
+	position: relative;
+	left: 10px;
+}
+.filmes{
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+	flex-wrap: nowrap;
+	scroll-behavior: smooth;
+}
+.cartaz img{
+	width: 250px;
+	height: 300px;;
+}
+ .cartaz.hover{
+	transform: scale(1.2);
+	transition: 0.2s ease-in-out;
+} 
+.back, .forward{
+	color: var(--textnav);
+    font-weight: bold;
+    width: 50px;
+    height: 100px;
+    background: var(--navcolor);
+    font-size: 42px;
+    line-height: 92px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 54px;
+}
+.forward:hover{
+	background-color:var(--navhover2);
+	transition: 0.5s ease-in-out;
+}
+.back:hover{
+	background-color:var(--navhover2);
+	transition: 0.5s ease-in-out;
+}
+.back{
+	position: absolute;
+	left: -54px;
+	top: 150px;
+}
+.forward{
+    position: absolute;
+    right: 1px;
+	top: 150px;
+
+}
+/*----------------------------------------fim carousel-------------------------------------------*/
+/*----------------------------------------mobile-------------------------------------------*/
+@media screen and (max-width: 1000px){
+	.menu{
+		position:relative
+	}
+	.menu ul{
+		background:#111;
+		position:absolute;
+		top:100%;
+		right:0;
+		left:0;
+		z-index:3;
+		height:auto;
+		display:none
+	}
+	.menu ul.sub-menus{
+		width:100%;
+		position:static;
+	}
+	.menu ul.sub-menus a{
+		padding-left:30px;
+	}
+	.menu li{
+		display:block;
+		float:none;
+		width:auto;
+	}
+	.menu input, .menu label{
+		position:absolute;
+		top:0;
+		left:0;
+		display:block
+	}
+	.menu input{
+		z-index:4
+	}
+	.menu input:checked + label{
+		color:white
+	}
+	.menu input:checked + label:before {
+		content:"\00d7"
+	}
+	.menu input:checked ~ ul{
+		display:block
+	}
+	.logo{
+		display: block;
+		position: absolute;
+		left: 115px;
+	}
+	.container{
+		width: 100%;
+	}
+	.principal{
+		width: auto;
+	}
+	.principal p{
+		display: grid;
+		width: 137%;
+		font-size: 50%;
+		line-height: 15px;
+	} 
+	.title{
+		font-size: 100%;
+	}
+	.buttons button{
+		width: 25%;
+		font-size: 40%;
+	}
+	.content{
+		width: 65%;
+	}
+	.filmes{
+		overflow: visible;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 5px
+	}
+	.filmes img{
+		width: 90px;
+		height: 160px;
+	}
+	.carousel a{
+		display: none;
+	}
+
+}
